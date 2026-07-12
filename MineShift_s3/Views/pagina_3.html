@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineShift - Control Minero</title>
+    <!-- Bootstrap librerías frontend -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpeg" alt="Logo MineShift" width="250 ">
+        <div class="texto-header">
+        <h1>MineShift</h1>
+        <p>Control de Accesos y Turnos</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Panel Principal</a></li>
+            <li><a href="pagina_2.html">Registro de Acceso</a></li>
+            <li><a href="pagina_3.html" class="active">Reportes de Descanso</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="caja-principal">
+            <section>
+                <h2>Reportes de Descanso</h2>
+                <article>
+                    <h3>Alertas de Fatiga</h3>
+                    <p>Informativo de las últimas 24 horas de operación minera</p>
+
+                    <div class="alerta-amarilla">
+                        <p><strong>Aviso Importante:</strong> Se sugiere revisar la bitácora del turno de noche por fatiga menor</p>
+                    </div>
+
+                    <!--Banner para mostrar las alertas de WebSockets en tiempo real -->
+                    <div id="alerta-websocket" class="alert alert-info d-none mt-3" role="alert"></div>
+
+                    <!--Tabla HTML conectada a la segunda tabla de MySQL -->
+                    <h3 class="mt-4">Historial de Accesos MySQL</h3>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped table-bordered mt-2 text-white">
+                            <thead>
+                                <tr>
+                                    <th>RUT Operario</th>
+                                    <th>Zona Asignada</th>
+                                    <th>Fecha / Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-historial-cuerpo">
+                                <tr>
+                                    <td colspan="3" class="text-center text-muted">Cargando registros...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+<footer>
+    <p>&copy; 2026 MineShift</p>
+    <p>Contacto: <a href="mailto:soporte@mineshift.cl">soporte@mineshift.cl</a></p>
+
+    <ul style="list-style: none; padding: 0;">
+        <li style="display: inline; margin: 0 10px;"><a href="#">Facebook</a></li>
+        <li style="display: inline; margin: 0 10px;"><a href="#">X (Twitter)</a></li>
+        <li style="display: inline; margin: 0 10px;"><a href="#">LinkedIn</a></li>
+    </ul>
+</footer>
+    
+    <!-- Script independiente que controla el WebSocket de esta página -->
+    <script src="js/reportes.js"></script>
+</body>
+</html>

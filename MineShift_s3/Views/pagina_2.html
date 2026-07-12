@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineShift - Control Minero</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.jpeg" alt="Logo MineShift" width="250 ">
+        <div class="texto-header">
+        <h1>MineShift</h1>
+        <p>Control de Accesos y Turnos</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Panel Principal</a></li>
+            <li><a href="pagina_2.html" class="active">Registro de Acceso</a></li>
+            <li><a href="pagina_3.html">Reportes de Descanso</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="caja-principal">
+            <section>
+                <h2>Control Acceso Manual</h2>
+                <article>
+                    <h3>Ingreso de Operarios</h3>
+                    <p>Use este formulario <b>Exclusivamente</b> en caso de emergencia</p>
+
+                    <form id="form-acceso" action="#" method="POST" onsubmit="return false;">
+                        <P>RUT del trabajador: </P>
+                        <input type="text" id="rut-trabajador" name="rut"   placeholder="12345678-9" required>
+                        <p>Zona de Destino</p>
+                        <select id="zona-destino" name="zona">
+                            <option value="Tajo Abierto">Tajo Abierto</option>
+                            <option value="Planta de Chancado">Planta de Chancado</option>
+                            <option value="Mina Subterranea">Mina Subterranea</option>
+                        </select>
+                        <br><br>
+                        <button type="submit">Registrar Marcacion</button>
+                    </form>
+                </article>
+            <article>
+                    <h3>Vista de la Faena Minera</h3>
+                    <img src="/img/faena.jpeg" alt="Opetacion en faena Minera" class="foto-faena">
+            </article>
+        </section>
+    </div>
+    </main>
+
+<footer>
+    <p>&copy; 2026 MineShift</p>
+    <p>Contacto: <a href="mailto:soporte@mineshift.cl">soporte@mineshift.cl</a></p>
+
+    <ul style="list-style: none; padding: 0;">
+        <li style="display: inline; margin: 0 10px;"><a href="#">Facebook</a></li>
+        <li style="display: inline; margin: 0 10px;"><a href="#">X (Twitter)</a></li>
+        <li style="display: inline; margin: 0 10px;"><a href="#">LinkedIn</a></li>
+    </ul>
+</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
